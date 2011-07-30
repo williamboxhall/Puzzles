@@ -27,4 +27,9 @@ public class SubstringTest {
     public void trueForMultipleInstancesOfFirstLetter() {
         assertThat(substring.isSubstring("cat", "acacat"), is(true));
     }
+
+    @Test
+    public void falseWhenNoMatch() {
+        assertThat(substring.isSubstring("foo", "barbaz"), is(false));
+    }
 }
